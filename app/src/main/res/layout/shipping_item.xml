@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/card_shippingItem_parent"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_shippingItem_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/txt_shippingItem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/img_shippingItem_image"
+            android:maxLines="2"
+            tools:text="گوشی سامسونگ جدید" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/txt_shippingItem_guranteeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_shippingItem_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/img_shippingItem_image"
+            android:text="گارانتی:"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/txt_shippingItem_guarantee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_shippingItem_title"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/txt_shippingItem_guranteeTitle"
+            tools:text="گارانتی آوا دو ساله" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/txt_shippingItem_sellerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_shippingItem_guarantee"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/img_shippingItem_image"
+            android:text="فروشنده:"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/txt_shippingItem_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_shippingItem_guarantee"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/txt_shippingItem_sellerTitle"
+            android:text="دیجی کالا" />
+
+        <View
+            android:layout_marginTop="8dp"
+            android:id="@+id/view_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/img_shippingItem_image"
+            android:background="@color/gray300" />
+
+        <RelativeLayout
+            android:id="@+id/rel_shippingItem_totalPriceParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line1"
+            android:background="@color/gray100"
+            android:padding="8dp">
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/txt_shippingItem_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="3,452,200 تومان" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="قیمت کل" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_shippingItem_totalPriceParent"
+            android:background="@color/gray300" />
+
+        <RelativeLayout
+            android:id="@+id/rel_shippingItem_finalPriceParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line2"
+            android:background="@color/gray100"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txt_shippingItem_finalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                tools:text="3,452,200 تومان" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="قیمت نهایی"
+                android:textColor="@color/green"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rel_shippingItem_finalPriceParent"
+            android:background="@color/gray300" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_line3"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txt_shippingItem_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حذف"
+                android:textColor="@color/red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

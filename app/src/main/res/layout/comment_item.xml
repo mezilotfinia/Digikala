@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rel_commentItem_titleFrame"
+        android:background="@color/gray300"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            tools:text="محمد صمیمی"
+            android:layout_alignParentRight="true"
+            android:id="@+id/txt_commentItem_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/linear_commentItem_dislike"
+            android:padding="4dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_comment_like"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/txt_commentItem_dislike"
+                android:layout_marginRight="8dp"
+                tools:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                app:srcCompat="@drawable/ic_dislike_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_toRightOf="@id/linear_commentItem_dislike"
+            android:id="@+id/linear_commentItem_like"
+            android:padding="4dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_comment_like"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="12sp"
+                android:id="@+id/txt_commentItem_like"
+                android:layout_marginRight="8dp"
+                tools:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                app:srcCompat="@drawable/ic_like_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/rel_commentItem_titleFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:visibility="gone"
+                android:layout_margin="8dp"
+                android:textColor="@color/green"
+                android:background="@drawable/shape_txt_is_suggested"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="خرید این محصول را حتما پیشنهاد می کنم"
+                android:id="@+id/txt_commentItem_isSuggested"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_below="@id/txt_commentItem_isSuggested"
+                android:padding="8dp"
+                android:gravity="right"
+                tools:text="@string/signup_exp"
+                android:id="@+id/txt_commentItem_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_below="@id/txt_commentItem_description"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/img_commentItem_positiveImage"
+                app:srcCompat="@drawable/ic_arrow_upward_green_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/txt_commentItem_description"
+                android:layout_toLeftOf="@id/img_commentItem_positiveImage"
+                tools:text="دوربین عالی"
+                android:id="@+id/txt_commentItem_positiveTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/img_commentItem_negativeImage"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/img_commentItem_positiveImage"
+                app:srcCompat="@drawable/ic_arrow_downward_red_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="12sp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/img_commentItem_positiveImage"
+                android:layout_toLeftOf="@id/img_commentItem_negativeImage"
+                tools:text="باتری ضعیف"
+                android:id="@+id/txt_commentItem_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/img_commentItem_negativeImage"
+                android:id="@+id/line_commentItem"
+                android:background="@color/gray200"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginBottom="8dp"
+                android:layout_below="@id/line_commentItem"
+                android:id="@+id/rv_commentItem_commentRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="8dp"
+    android:id="@+id/card_filteItem_parent"
+    android:foreground="?android:selectableItemBackground"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_filterItem_image"
+            android:layout_margin="8dp"
+            android:layout_alignParentRight="true"
+            tools:src="@drawable/ic_filter_list_black_24dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="24dp"
+            android:id="@+id/txt_filterItem_title"
+            tools:text="samsung galaxy s10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/txt_filterItem_desc"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/txt_filterItem_title"
+            tools:text="samsung galaxy s10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/line_filterItem"
+            android:layout_toLeftOf="@id/img_filterItem_image"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/txt_filterItem_desc"
+            android:background="@color/gray400"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/txt_filteItem_price"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/line_filterItem"
+            android:textColor="@color/green"
+            tools:text="23000000 تومان"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

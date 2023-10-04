@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category.CatActivity">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <ImageView
+            android:layout_marginRight="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_arrow_back_24dp"
+            android:id="@+id/img_cat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/white" />
+        <TextView
+            android:layout_marginRight="16dp"
+            android:textColor="@color/white"
+            android:text="دسته بندی محصولات"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/img_cat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        app:tabMode="scrollable"
+        android:layoutDirection="ltr"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/gray400"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/white"
+        android:id="@+id/tab_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager_cat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>

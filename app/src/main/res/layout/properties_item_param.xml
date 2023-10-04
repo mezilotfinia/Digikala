@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <TextView
+        android:textSize="12sp"
+        android:fontFamily="@font/font"
+        android:id="@+id/txt_propertiesItemParam_value"
+        android:background="@drawable/shape_properties_title"
+        android:gravity="center"
+        tools:text="12 مگا پیکسل"
+        android:layout_width="0dp"
+        android:layout_weight="0.6"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img_propertiesItem_haveOrNot"
+        android:visibility="gone"
+        android:layout_weight="0.6"
+        tools:srcCompat="@drawable/ic_done_green_24dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    
+   <TextView
+       android:textSize="12sp"
+       android:fontFamily="@font/font"
+       android:background="@drawable/shape_properties_title"
+       android:paddingRight="8dp"
+       tools:text="دوربین"
+       android:layout_weight="0.4"
+       android:id="@+id/txt_propertiesItemParam_key"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content" />
+
+</LinearLayout>
